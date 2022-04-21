@@ -43,13 +43,13 @@ cropImage = imcrop(grayImage,[110 110 800 800]);
 
 contrastImage = histeq(cropImage);
 
-binImage = imbinarize(contrastImage, "adaptive");
+%binImage = imbinarize(contrastImage, "adaptive");
 
-se = eye(5);
+% se = eye(5);
 
-closedImage = imopen(binImage,se);
+% closedImage = imopen(binImage,se);
 
-img = closedImage;
+img = contrastImage;
 
 %% Step 2: Select Point Locations for Feature Extraction
 % Here, a regular spaced grid of point locations is created over I. This
